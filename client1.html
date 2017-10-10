@@ -17,6 +17,7 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <!-- Custom styles for this template -->
     <link href="styles/simple-sidebar.css" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
 </head>
 
 <body>
@@ -62,41 +63,19 @@
                 <div class="row">
                     <div class="col">
                         <div class="card">
-                            <table>
-                                    <thead>
-                                        <tr>
-                                            <th>Project Name</th>
-                                            <th>Proposed Budget</th>
-                                            <th>Actual Budget</th>
-                                            <th>Proposed Timeline</th>
-                                            <th>Time Remaining</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Kitchen</td>
-                                            <td>$10,000</td>
-                                            <td>$7,000</td>
-                                            <td>3 Weeks</td>
-                                            <td>2 Weeks</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td>Master Bath</td>
-                                            <td>$7,000</td>
-                                            <td>$10,000</td>
-                                            <td>3 Weeks</td>
-                                            <td>2 Weeks</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Front Door</td>
-                                            <td>$2,000</td>
-                                            <td>$2,500</td>
-                                            <td>3 Days</td>
-                                            <td>3 Days</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Project Description</th>
+                        <th>Proposed Budget</th>
+                        <th>Actual Budget</th>
+                        <th>Proposed Timeline</th>
+                        <th>Actual Timeline</th>
+                    </tr>
+                </thead>
+                <tbody id="display">
+                </tbody>
+            </table>
                         </div>
                     </div>
                 </div>
@@ -114,18 +93,19 @@
                                 <span class="card-title grey-text text-darken-4">Contact Info<i class="material-icons right">close</i></span>
                                 <form>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="name-input" placeholder="Name" required>
+                                        <input type="text" class="form-control" id="name-input" placeholder="Client Name" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="address-input" placeholder="Address" required>
+                                        <input type="text" class="form-control" id="address-input" placeholder="Project Address" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="email-input" placeholder="Email" required>
+                                        <input type="text" class="form-control" id="email-input" placeholder="Client Email" required>
                                     </div>
+
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="phone-input" placeholder="Phone" required>
+                                        <input type="text" class="form-control" id="phone-input" placeholder="Client Phone #" required>
                                     </div>
-                                    <button type="button" id="train-button" name="submit" class="btn btn-primary pull-left ">Submit
+                                    <button type="button" id="contact-submit" name="submit" class="btn btn-primary pull-left ">Submit
                                     </button>
                                 </form>
                             </div>
@@ -137,11 +117,11 @@
                                 <img class="activator" src="images/Budget.png">
                             </div>
                             <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4">Budget<i class="material-icons right">more_vert</i></span>
+                                <span class="card-title activator grey-text text-darken-4">Budget / Timeline<i class="material-icons right">more_vert</i></span>
                                 <p></p>
                             </div>
                             <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Budget<i class="material-icons right">close</i></span>
+                                <span class="card-title grey-text text-darken-4">Budget / Timeline<i class="material-icons right">close</i></span>
                                 <form>
                                     <div class="form-group">
                                         <input type="text" class="form-control" id="project-input" placeholder="Project Description" required>
@@ -150,38 +130,41 @@
                                         <input type="text" class="form-control" id="budget-input" placeholder="Proposed Budget" required>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="actual-input" placeholder="Actual Budget" required>
+                                        <input type="text" class="form-control" id="actualBudget-input" placeholder="Actual Budget" required>
                                     </div>
-                                    <button type="button" id="train-button" name="submit" class="btn btn-primary pull-left ">Submit
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="timeline-input" placeholder="Proposed Timeline (days)" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="actualTimeline-input" placeholder="Actual Timeline (days)" required>
+                                    </div>
+                                    <button type="button" id="budget-submit" name="submit" class="btn btn-primary pull-left ">Submit
                                     </button>
                                 </form>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="col">
                         <div class="card">
                             <div class="card-image waves-effect waves-block waves-light">
                                 <img class="activator" src="images/Timeline.png">
                             </div>
                             <div class="card-content">
-                                <span class="card-title activator grey-text text-darken-4">Timeline<i class="material-icons right">more_vert</i></span>
+                                <span class="card-title activator grey-text text-darken-4">Progress<i class="material-icons right">more_vert</i></span>
                                 <p></p>
                             </div>
                             <div class="card-reveal">
-                                <span class="card-title grey-text text-darken-4">Timeline<i class="material-icons right">close</i></span>
-                                <form>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="project-input" placeholder="Project Description" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="timeline-input" placeholder="Proposed Timeline" required>
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" id="timeLeft-input" placeholder="Time Left" required>
-                                    </div>
-                                    <button type="button" id="train-button" name="submit" class="btn btn-primary pull-left ">Submit
-                                    </button>
-                                </form>
+                                <span class="card-title grey-text text-darken-4">Progress<i class="material-icons right">close</i></span>
+                                <b>Kitchen</b>
+                                <p>40%</p>               
+                                <hr>
+                                <b>Bathroom</b>
+                                <p>60%</p>
+                                <hr>
+                                <b>Patio</b>
+                                <p>75%</p>
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -260,6 +243,8 @@
         $("#wrapper").toggleClass("toggled");
     });
     </script>
+    <script type="text/javascript" src="js/javascript.js"</script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 </body>
 
 </html>
