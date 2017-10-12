@@ -2923,7 +2923,7 @@ th {
 }
 
 .collection .collection-item.active {
-    background-color: #26a69a;
+    background-color: #703030;
     color: #eafaf9
 }
 
@@ -2935,7 +2935,7 @@ th {
     display: block;
     -webkit-transition: .25s;
     transition: .25s;
-    color: #26a69a
+    color: #703030
 }
 
 .collection a.collection-item:not(.active):hover {
@@ -2958,7 +2958,7 @@ th {
 
 .secondary-content {
     float: right;
-    color: #26a69a
+    color: #703030
 }
 
 .collapsible .collection {
@@ -2999,13 +2999,13 @@ th {
     top: 0;
     left: 0;
     bottom: 0;
-    background-color: #26a69a;
+    background-color: #703030;
     -webkit-transition: width .3s linear;
     transition: width .3s linear
 }
 
 .progress .indeterminate {
-    background-color: #26a69a
+    background-color: #703030
 }
 
 .progress .indeterminate:before {
@@ -3167,7 +3167,7 @@ span.badge.new {
     font-weight: 300;
     font-size: 0.8rem;
     color: #fff;
-    background-color: #26a69a;
+    background-color: #703030;
     border-radius: 2px
 }
 
@@ -4319,7 +4319,7 @@ a {
 
 html {
     line-height: 1.5;
-    font-family: "Roboto", sans-serif;
+    font-family: "Open Sans Condensed", sans-serif;
     font-weight: normal;
     color: rgba(0, 0, 0, 0.87)
 }
@@ -4369,7 +4369,9 @@ h1 {
 }
 
 h2 {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 	color: #fcfcfc;
     font-weight: 300;
     font-size: 3.56rem;
@@ -4383,10 +4385,12 @@ h3 {
 }
 
 h4 {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     font-weight: 300;
     font-size: 24px;
-    color: #1e2f39;
+    color: #404040;
 }
 
 h5 {
@@ -4591,6 +4595,7 @@ small {
 }
 
 .card {
+    font-family: "Open Sans Condensed", sans-serif;
     position: relative;
     margin: .5rem 0 1rem 0;
     background-color: #fff;
@@ -4602,6 +4607,7 @@ small {
 }
 
 .card .card-title {
+    font-family: "Open Sans Condensed", sans-serif;
     font-size: 24px;
     font-weight: 300
 }
@@ -5099,14 +5105,14 @@ small {
 .btn:focus,
 .btn-large:focus,
 .btn-floating:focus {
-    background-color: #1d7d74
+    background-color: #343131
 }
 
 .btn,
 .btn-large {
     text-decoration: none;
     color: #fff;
-    background-color: #26a69a;
+    background-color: #404040;
     text-align: center;
     letter-spacing: .5px;
     -webkit-transition: .2s ease-out;
@@ -5116,7 +5122,7 @@ small {
 
 .btn:hover,
 .btn-large:hover {
-    background-color: #2bbbad
+    background-color: #343131
 }
 
 .btn-floating {
@@ -5129,7 +5135,7 @@ small {
     height: 40px;
     line-height: 40px;
     padding: 0;
-    background-color: #26a69a;
+    background-color: #703030;
     border-radius: 50%;
     -webkit-transition: .3s;
     transition: .3s;
@@ -5138,7 +5144,7 @@ small {
 }
 
 .btn-floating:hover {
-    background-color: #26a69a
+    background-color: #703030
 }
 
 .btn-floating:before {
@@ -5289,7 +5295,7 @@ button.btn-floating {
     z-index: -1;
     width: 40px;
     height: 40px;
-    background-color: #26a69a;
+    background-color: #703030;
     border-radius: 50%;
     -webkit-transform: scale(0);
     transform: scale(0)
@@ -5376,7 +5382,7 @@ button.btn-floating {
 .dropdown-content li>a,
 .dropdown-content li>span {
     font-size: 16px;
-    color: #26a69a;
+    color: #703030;
     display: block;
     line-height: 22px;
     padding: 14px 16px
@@ -5766,9 +5772,9 @@ button.btn-floating {
 }
 
 .chips.focus {
-    border-bottom: 1px solid #26a69a;
-    -webkit-box-shadow: 0 1px 0 0 #26a69a;
-    box-shadow: 0 1px 0 0 #26a69a
+    border-bottom: 1px solid #703030;
+    -webkit-box-shadow: 0 1px 0 0 #703030;
+    box-shadow: 0 1px 0 0 #703030
 }
 
 .chips:hover {
@@ -5776,7 +5782,7 @@ button.btn-floating {
 }
 
 .chips .chip.selected {
-    background-color: #26a69a;
+    background-color: #703030;
     color: #fff
 }
 
@@ -5995,9 +6001,9 @@ input[type=tel]:not(.browser-default):focus:not([readonly]),
 input[type=number]:not(.browser-default):focus:not([readonly]),
 input[type=search]:not(.browser-default):focus:not([readonly]),
 textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: 1px solid #26a69a;
-    -webkit-box-shadow: 0 1px 0 0 #26a69a;
-    box-shadow: 0 1px 0 0 #26a69a
+    border-bottom: 1px solid #703030;
+    -webkit-box-shadow: 0 1px 0 0 #703030;
+    box-shadow: 0 1px 0 0 #703030
 }
 
 input:not([type]):focus:not([readonly])+label,
@@ -6013,7 +6019,7 @@ input[type=tel]:not(.browser-default):focus:not([readonly])+label,
 input[type=number]:not(.browser-default):focus:not([readonly])+label,
 input[type=search]:not(.browser-default):focus:not([readonly])+label,
 textarea.materialize-textarea:focus:not([readonly])+label {
-    color: #26a69a
+    color: #703030
 }
 
 input:not([type]).validate+label,
@@ -6307,7 +6313,7 @@ textarea.materialize-textarea+label:after,
 }
 
 .input-field .prefix.active {
-    color: #26a69a
+    color: #703030
 }
 
 .input-field .prefix~input,
@@ -6500,12 +6506,12 @@ textarea.materialize-textarea.validate+label:not(.label-icon).active {
 [type="radio"]:checked+label:after,
 [type="radio"].with-gap:checked+label:before,
 [type="radio"].with-gap:checked+label:after {
-    border: 2px solid #26a69a
+    border: 2px solid #703030
 }
 
 [type="radio"]:checked+label:after,
 [type="radio"].with-gap:checked+label:after {
-    background-color: #26a69a
+    background-color: #703030
 }
 
 [type="radio"]:checked+label:after {
@@ -6625,8 +6631,8 @@ form p:last-child {
     height: 22px;
     border-top: 2px solid transparent;
     border-left: 2px solid transparent;
-    border-right: 2px solid #26a69a;
-    border-bottom: 2px solid #26a69a;
+    border-right: 2px solid #703030;
+    border-bottom: 2px solid #703030;
     -webkit-transform: rotate(40deg);
     transform: rotate(40deg);
     -webkit-backface-visibility: hidden;
@@ -6647,7 +6653,7 @@ form p:last-child {
     height: 22px;
     border-top: none;
     border-left: none;
-    border-right: 2px solid #26a69a;
+    border-right: 2px solid #703030;
     border-bottom: none;
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
@@ -6716,8 +6722,8 @@ form p:last-child {
     top: 0;
     width: 20px;
     height: 20px;
-    border: 2px solid #26a69a;
-    background-color: #26a69a;
+    border: 2px solid #703030;
+    background-color: #703030;
     z-index: 0
 }
 
@@ -6729,8 +6735,8 @@ form p:last-child {
 
 [type="checkbox"].filled-in.tabbed:checked:focus+label:after {
     border-radius: 2px;
-    background-color: #26a69a;
-    border-color: #26a69a
+    background-color: #703030;
+    border-color: #703030
 }
 
 [type="checkbox"].filled-in:disabled:not(:checked)+label:before {
@@ -6781,7 +6787,7 @@ form p:last-child {
 }
 
 .switch label input[type=checkbox]:checked+.lever:after {
-    background-color: #26a69a
+    background-color: #703030
 }
 
 .switch label .lever {
@@ -7077,7 +7083,7 @@ input[type=range]+.thumb {
     height: 0;
     width: 0;
     border-radius: 50%;
-    background-color: #26a69a;
+    background-color: #703030;
     margin-left: 7px;
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
@@ -7089,7 +7095,7 @@ input[type=range]+.thumb .value {
     display: block;
     width: 30px;
     text-align: center;
-    color: #26a69a;
+    color: #703030;
     font-size: 0;
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg)
@@ -7122,7 +7128,7 @@ input[type=range]::-webkit-slider-thumb {
     height: 14px;
     width: 14px;
     border-radius: 50%;
-    background-color: #26a69a;
+    background-color: #703030;
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
     margin: -5px 0 0 0;
@@ -7149,7 +7155,7 @@ input[type=range]::-moz-range-thumb {
     height: 14px;
     width: 14px;
     border-radius: 50%;
-    background: #26a69a;
+    background: #703030;
     margin-top: -5px
 }
 
@@ -7183,7 +7189,7 @@ input[type=range]::-ms-thumb {
     height: 14px;
     width: 14px;
     border-radius: 50%;
-    background: #26a69a
+    background: #703030
 }
 
 input[type=range]:focus::-ms-fill-lower {
@@ -7309,7 +7315,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .side-nav li>a.btn-floating:hover {
-    background-color: #26a69a
+    background-color: #703030
 }
 
 .side-nav li>a>i,
@@ -7508,7 +7514,7 @@ input[type=range]:focus::-ms-fill-upper {
     width: 100%;
     height: 100%;
     opacity: 0;
-    border-color: #26a69a
+    border-color: #703030
 }
 
 .spinner-blue,
@@ -8714,7 +8720,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .picker__date-display {
     text-align: left;
-    background-color: #26a69a;
+    background-color: #703030;
     color: #fff;
     padding: 18px;
     font-weight: 300
@@ -8797,7 +8803,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 .picker__day.picker__day--today {
-    color: #26a69a
+    color: #703030
 }
 
 .picker__day.picker__day--today.picker__day--selected {
@@ -8814,7 +8820,7 @@ input[type=range]:focus::-ms-fill-upper {
     border-radius: 50%;
     -webkit-transform: scale(0.9);
     transform: scale(0.9);
-    background-color: #26a69a;
+    background-color: #703030;
     color: #ffffff
 }
 
@@ -8834,7 +8840,7 @@ input[type=range]:focus::-ms-fill-upper {
 .picker__clear {
     font-size: 1.1rem;
     padding: 0 1rem;
-    color: #26a69a
+    color: #703030
 }
 
 .picker__clear {
@@ -9111,20 +9117,20 @@ button.picker__close:focus {
 
 .clockpicker-canvas-bearing {
     stroke: none;
-    fill: #26a69a
+    fill: #703030
 }
 
 .clockpicker-canvas-bg {
     stroke: none;
-    fill: #26a69a
+    fill: #703030
 }
 
 .clockpicker-canvas-bg-trans {
-    fill: #26a69a
+    fill: #703030
 }
 
 .clockpicker-canvas line {
-    stroke: #26a69a;
+    stroke: #703030;
     stroke-width: 4;
     stroke-linecap: round
 }

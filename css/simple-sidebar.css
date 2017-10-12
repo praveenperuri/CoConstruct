@@ -7,6 +7,15 @@ body {
 }
 
 h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fcfcfc;
+    float: right;
+}
+
+h2 {
+    font-weight: 700;
+    text-transform: uppercase;
     color: #fcfcfc;
     float: right;
 }

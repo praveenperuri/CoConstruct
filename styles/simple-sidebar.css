@@ -7,6 +7,10 @@ body {
 }
 
 h1 {
+    font-family: "Open Sans Condensed";
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     color: #fcfcfc;
     float: right;
 }
@@ -50,7 +54,7 @@ h1 {
 
 .page-header {
     padding: 20px;
-    background-color: #2980b9;
+    background-color: #404040;
 }
 
 #page-content-wrapper {
@@ -90,12 +94,16 @@ h1 {
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: rgba(0,0,0,0.87);
+    font-family: "Open Sans Condensed", sans-serif;
+    letter-spacing: 1px;
+    color: #2980B9;
 }
 
 .sidebar-nav li a:hover {
     text-decoration: none;
-    color: rgba(0,0,0,0.87);
+    font-family: "Open Sans Condensed", sans-serif;
+    letter-spacing: 1px;
+    color: #2980B9;
     background: rgba(200, 200, 200, 0.2);
 }
 
@@ -124,6 +132,10 @@ h1 {
     height: 5px;
     background-color: #fcfcfc;
     margin: 6px 0;
+}
+
+.table-head {
+    color: #2980b9
 }
 
 @media(min-width:768px) {
